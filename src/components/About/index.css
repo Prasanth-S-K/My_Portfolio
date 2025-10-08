@@ -1,0 +1,85 @@
+/* About Section */
+.about-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #f0f4f8, #e0f2fe);
+  padding: 4rem 1.5rem;
+  color: #111827;
+}
+
+.about-content {
+  max-width: 800px;
+  background-color: #ffffff;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 6px 25px rgba(0, 0, 0, 0.08); /* soft professional shadow */
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.about-content:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.12); /* subtle hover lift */
+}
+
+.about-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #1e40af; /* deep blue accent */
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  font-size: 1.8rem;
+  color: #1e3a8a; /* slightly darker blue for the icon */
+}
+
+.about-text {
+  font-size: 1.05rem;
+  line-height: 1.8;
+  color: #374151; /* dark gray for readability */
+  margin-bottom: 1rem;
+  text-align: justify;
+}
+
+.highlight {
+  color: #1e40af; /* deep blue for emphasis */
+  font-weight: 600;
+}
+
+/* 🌐 Responsive Design */
+@media (max-width: 768px) {
+  .about-content {
+    padding: 1.8rem;
+  }
+
+  .about-title {
+    font-size: 1.6rem;
+  }
+
+  .about-text {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .about-section {
+    padding: 3rem 1rem;
+  }
+
+  .icon {
+    display: none;
+  }
+
+  .about-text {
+    font-size: 0.9rem;
+  }
+}

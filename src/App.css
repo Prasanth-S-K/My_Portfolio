@@ -1,0 +1,27 @@
+/* Set box-sizing on the body */
+body {
+  box-sizing: border-box;
+  margin: 0px; 
+  padding: 0px;
+  overflow-x: hidden; /* prevent horizontal scroll */
+}
+
+/* Make all elements inherit box-sizing */
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+/* Root container */
+#root {
+  width: 100%;   /* use 100% instead of 100vw */
+  margin: 0 auto;
+}
+
+.app{
+  width: 100vw;
+  padding: 0px;
+}
+
+html{
+  scroll-behavior: smooth;
+}

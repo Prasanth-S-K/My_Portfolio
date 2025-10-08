@@ -1,0 +1,133 @@
+/* Home Section */
+.home {
+  height: 100vh;
+  width: 100vw;
+  padding: 50px 40px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: linear-gradient(135deg, #f0f4f8, #e0f2fe);
+}
+
+/* Home content container */
+.home-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #1e3a8a; /* deep blue text */
+  gap: 40px;
+  padding: 30px;
+  border-radius: 20px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  background: linear-gradient(
+    135deg,
+    rgba(30, 58, 138, 0.05),
+    rgba(37, 99, 235, 0.05)
+  ); /* subtle blue gradient overlay */
+  backdrop-filter: blur(10px);
+}
+
+/* Text content */
+.text-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.text-content h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #1e3a8a; /* deep blue heading */
+}
+
+.text-content p {
+  font-size: 1.15rem;
+  line-height: 1.6;
+  color: #374151; /* dark gray for readability */
+}
+
+/* Profile container */
+.profile-container {
+  flex: 0 0 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 1000px;
+}
+
+.profile-photo {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 20px;
+  object-fit: cover;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.profile-photo:hover {
+  transform: scale(1.05) rotateY(5deg);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+}
+
+/* Responsive: tablets */
+@media (max-width: 1024px) {
+  .home-content {
+    flex-direction: column-reverse;
+    gap: 30px;
+    padding: 20px;
+  }
+
+  .profile-container {
+    flex: 0 0 250px;
+  }
+
+  .profile-photo {
+    max-width: 300px;
+  }
+
+  .text-content h1 {
+    font-size: 2.5rem;
+    text-align: center;
+  }
+
+  .text-content p {
+    font-size: 1.1rem;
+    text-align: center;
+  }
+}
+
+/* Responsive: mobile */
+@media (max-width: 640px) {
+  .home {
+    padding: 40px 20px;
+    justify-content: center;
+  }
+
+  .home-content {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .text-content h1 {
+    font-size: 2rem;
+  }
+
+  .text-content p {
+    font-size: 1rem;
+  }
+
+  .profile-container {
+    flex: 0 0 200px;
+  }
+
+  .profile-photo {
+    max-width: 200px;
+  }
+}

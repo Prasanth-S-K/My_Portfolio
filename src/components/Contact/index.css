@@ -1,0 +1,225 @@
+/* Contact Section */
+.contact {
+  min-height: 100vh; /* full viewport height */
+  width: 100%; /* full width */
+  padding: 4rem 2rem;
+  text-align: center;
+  background: linear-gradient(
+    135deg,
+    #f0f4f8,
+    #e0f2fe
+  ); /* soft professional gradient */
+  color: #1e3a8a;
+  position: relative; /* for absolute shapes */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* hide overflowing decorative shapes */
+}
+
+/* Decorative full-width background blobs */
+.contact::before,
+.contact::after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0.15;
+  z-index: 0;
+}
+
+/* Top-left blob */
+.contact::before {
+  width: 500px;
+  height: 500px;
+  background: #2563eb;
+  top: -150px;
+  left: -150px;
+}
+
+/* Bottom-right blob */
+.contact::after {
+  width: 600px;
+  height: 600px;
+  background: #1e40af;
+  bottom: -200px;
+  right: -200px;
+}
+
+/* Section Title */
+.contact h2 {
+  position: relative;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 3rem;
+  z-index: 1;
+}
+
+.contact h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: #2563eb;
+  margin: 12px auto 0;
+  border-radius: 2px;
+}
+
+/* Social links with 3D hover effect */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+  perspective: 1000px;
+  z-index: 1;
+  position: relative;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+  transition:
+    transform 0.4s ease,
+    filter 0.4s ease;
+  transform-style: preserve-3d;
+  cursor: pointer;
+}
+
+.icon:hover {
+  transform: translateZ(40px) rotateX(10deg) rotateY(5deg) scale(1.1);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.25));
+}
+
+/* Colored glows per platform */
+a[href*="linkedin"] .icon:hover {
+  filter: drop-shadow(0 0 20px rgba(10, 102, 194, 0.9));
+}
+
+a[href*="leetcode"] .icon:hover {
+  filter: drop-shadow(0 0 20px rgba(255, 152, 0, 0.9));
+}
+
+a[href*="github"] .icon:hover {
+  filter: drop-shadow(0 0 20px rgba(0, 0, 0, 0.9));
+}
+
+/* Buttons */
+.buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+  z-index: 1;
+  position: relative;
+}
+
+.btn {
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition:
+    background 0.3s ease,
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.btn:hover {
+  background: #1e40af;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.icon-small {
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact::before {
+    width: 400px;
+    height: 400px;
+    top: -100px;
+    left: -100px;
+  }
+
+  .contact::after {
+    width: 450px;
+    height: 450px;
+    bottom: -150px;
+    right: -150px;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact h2 {
+    font-size: 2rem;
+  }
+
+  .icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.95rem;
+  }
+
+  .contact::before {
+    width: 300px;
+    height: 300px;
+    top: -80px;
+    left: -80px;
+  }
+
+  .contact::after {
+    width: 350px;
+    height: 350px;
+    bottom: -100px;
+    right: -100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .contact {
+    padding: 3rem 1rem;
+  }
+
+  .social-links {
+    gap: 1.2rem;
+  }
+
+  .icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .btn {
+    width: 100%;
+    text-align: center;
+  }
+
+  .contact::before {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    left: -50px;
+  }
+
+  .contact::after {
+    width: 250px;
+    height: 250px;
+    bottom: -50px;
+    right: -50px;
+  }
+}

@@ -1,0 +1,65 @@
+/* ------------------------------------------------------------------
+  BELOW: Create a file named `Typewriter.css` next to this component
+  and paste the CSS contents shown here into that file.
+  (This canvas includes the CSS for convenience.)
+-------------------------------------------------------------------- */
+
+/* Typewriter.css */
+
+/* Wrapper controls overall size and layout */
+.typewriter-wrapper {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem; /* space between text and cursor */
+  font-family:
+    system-ui,
+    -apple-system,
+    "Segoe UI",
+    Roboto,
+    "Helvetica Neue",
+    Arial;
+  font-size: 1.5rem; /* adjust as needed */
+  font-weight: 600;
+  color: orangered; /* dark text */
+}
+
+/* Visible text (prevents wrapping) */
+.typewriter-text {
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+/* The blinking cursor — pure CSS animation */
+.typewriter-cursor {
+  display: inline-block;
+  width: 0.6ch;
+  line-height: 1;
+  margin-left: 0.1rem;
+  font-weight: 700;
+  animation: tw-blink 1s steps(2, start) infinite;
+}
+
+@keyframes tw-blink {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* Optional smaller variant: add class `typewriter-small` to wrapper */
+.typewriter-small {
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+/* Accessibility: hide cursor from screen readers */
+[type="hidden"] {
+  display: none;
+}
+
+/* End of Typewriter.css */
