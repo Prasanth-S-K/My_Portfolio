@@ -75,6 +75,12 @@
   box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15); /* slightly stronger hover shadow */
 }
 
+.project-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
 /* Modal */
 .modal-overlay {
   position: fixed;

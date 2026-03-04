@@ -23,6 +23,14 @@ function Skills() {
       alt: "Python",
     },
     {
+      src: "https://res.cloudinary.com/dtfndvjsg/image/upload/v1772431383/java-logo-png_seeklogo-158094_quzj5z.png",
+      alt: "Java",
+    },
+    {
+      src: "https://res.cloudinary.com/dtfndvjsg/image/upload/v1772431439/02Q6yxveinggAu3PomearaV-7.fit_lim.size_1050x591.v1569481734_cmz3gv.jpg",
+      alt: "Mongo DB",
+    },
+    {
       src: "https://res.cloudinary.com/dtfndvjsg/image/upload/v1759064816/desktop-wallpaper-mysql-logo-logo-brands-for-3d_bwexxz.jpg",
       alt: "MySQL",
     },
