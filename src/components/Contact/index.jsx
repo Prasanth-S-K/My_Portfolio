@@ -2,7 +2,8 @@ import "./index.css";
 
 function Contact() {
   const email = "prasanthk12051999@gmail.com"; // 🔹 your email here
-  const resumeLink = "/PRASANTH, K_Resume26925.pdf"; // 🔹 path to your resume (put it in public folder)
+  const resumeLink =
+    "C:\Users\PRASANTH K\Desktop\My_Portfolio\My_Portfolio\public\Prasanth_K,Resume.pdf"; // 🔹 path to your resume (put it in public folder)
 
   return (
     <section id="contact" className="contact">
@@ -56,7 +57,7 @@ function Contact() {
           onClick={() =>
             window.open(
               `https://mail.google.com/mail/?view=cm&fs=1&to=${email}`,
-              "_blank"
+              "_blank",
             )
           }
         >
