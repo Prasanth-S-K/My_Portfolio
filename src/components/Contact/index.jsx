@@ -2,7 +2,7 @@ import "./index.css";
 
 function Contact() {
   const email = "prasanthk12051999@gmail.com"; // 🔹 your email here
-  const resumeLink = "../../../public/Prasanth_K,Resume.pdf"; // 🔹 path to your resume (put it in public folder)
+  const resumeLink = "/Prasanth_K,Resume.pdf"; // 🔹 path to your resume (put it in public folder)
 
   return (
     <section id="contact" className="contact">
